@@ -1,0 +1,286 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    background-color: #B3D4FC;
+    color: #000;
+    padding: 20px;
+}
+
+.header {
+    text-align: center; 
+}
+
+.header h1 {
+    font-family: 'Inria Serif', serif; 
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.sun-container {
+    position: relative;
+    display: inline-block; 
+    width: 134px; 
+    height: 134px; 
+}
+
+.sun-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes bottom space/gap */
+}
+
+.temperature {
+    font-family: 'Inria Serif', serif; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 24px; 
+    color: black; 
+    font-weight: bold; 
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.feels-like {
+    font-family: 'Inria Serif', serif; 
+    font-size: 24px;
+    color: #666;
+}
+
+.hourly-forecast {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    background-color: #B3D4FC;
+    white-space: nowrap;
+}
+
+.hour {
+    background-color: #B3D4FC;
+    border-radius: 8px;
+    margin-right: 10px;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    min-width: 60px;
+}
+
+.weather-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 5px; /* Space between icon and temperature */
+}
+
+.temp {
+    font-family: 'Inria Serif', serif; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #0070CD;
+    margin-bottom: 5px; /* Space between temperature and time */
+}
+
+.time {
+    font-family: 'Inria Serif', serif; 
+    font-size: 16px;
+    color: #0070CD;
+}
+
+.uv-index {
+    font-family: 'Inria Serif', serif; 
+    margin-top: 20px;
+}
+
+.uv-bar {
+    position: relative;
+    width: 100%;
+    height: 60px; /* Set a fixed height */
+    background-image: url('images/frame 6.png'); /* Path to your UV scale image */
+    background-size: contain; /* Fits the image within the content box while maintaining its aspect ratio */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image in the div */
+}
+
+.temp-summary {
+    font-family: 'Inria Serif', serif; 
+    text-align: center; /* Centers the high and low information */
+    padding: 10px;
+    background-color: #B3D4FC; /* Matches the general theme of the app */
+    color: #000; /* Ensures text is readable */
+    font-size: 20px; /* Larger text for visibility */
+}
+
+.temp-range {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.high-low img {
+    width: 20px; /* Smaller size for the arrow icons */
+    vertical-align: middle; /* Aligns icons with the text */
+    margin-right: 5px; /* Space before the temperature number */
+}
+
+.overview {
+    display: flex;
+    align-items: center; /* Aligns items to the top */
+    justify-content: space-around; /* Spaces children out evenly */
+    width: 100%;
+}
+
+.map-container {
+    width: 200px; /* Adjust the width as needed */
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+    overflow: hidden; /* Ensures no content spills outside the border */
+    font-family: Arial, sans-serif; /* Sets the font for all text inside */
+}
+
+.toggle-bar {
+    display: flex;
+    background-color: #ccc; /* Light grey background */
+    justify-content: space-around; /* Evenly space the buttons */
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 15;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer; /* Makes it look clickable */
+}
+
+.toggle-button.active {
+    color: white;
+    background-color: #666;
+}
+
+.map-image img {
+    width: 100%; 
+    display: block; 
+}
+
+.map-description {
+    padding: 10px;
+    text-align: center; 
+    font-size: 10px;
+    background-color: #f0f0f0; 
+    color: #333; 
+}
+
+.daily-summary {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #B3D4FC; 
+    padding: 10px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center; 
+    flex-direction: row; 
+    text-align: center; 
+    flex-basis: 20%; 
+}
+
+.summary-text {
+    font-family: 'Inria Serif', serif; 
+    margin-top: 5px; 
+    font-size: 16px;
+    color: #333;
+}
+
+img {
+    width: 50px; 
+    height: auto;
+    margin-bottom: 5px; 
+}
+
+.daily-forecast {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.day-forecast {
+    background-color: #CBE8FF;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 120px; 
+    margin: 10px; 
+}
+
+.weather-icon {
+    width: 40px; 
+    height: auto;
+    display: block; 
+    margin: 0 auto 10px; 
+}
+
+.day-name {
+    font-family: 'Inria Serif', serif; 
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.high{
+    font-family: 'Inria Serif', serif; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #0070CD;
+    display: block; 
+}
+.low {
+    font-family: 'Inria Serif', serif; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #4693D3;
+    display: block; 
+}
+
+.map {
+    width: 100px; /* Placeholder */
+    height: 100px; /* Placeholder */
+    background-color: #fff; /* Placeholder */
+}
+
+
+.caret-container {
+    position: absolute; /* Positioning relative to the nearest positioned ancestor (usually the <body>) */
+    top: 0; /* At the very top of the page */
+    left: 0; /* At the very left of the page */
+    padding: 10px; /* Adds some space around the icon */
+}
+
+.caret-container img {
+    width: 30px; /* Adjust the size of the caret icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.plus-container {
+    position: absolute; /* Positioning relative to the nearest positioned ancestor (usually the <body>) */
+    top: 0; /* At the very top of the page */
+    right: 0; /* At the very right of the page */
+    padding: 10px; /* Adds some space around the icon */
+}
+
+.plus-container img {
+    width: 20px; /* Adjust the size of the plus icon */
+    height: auto; /* Maintain aspect ratio */
+}
